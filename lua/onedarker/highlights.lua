@@ -18,7 +18,7 @@ local highlights = {
   FoldColumn = { fg = C.accent, bg = C.alt_bg },
   LineNr = { fg = C.context },
   FloatBorder = { fg = C.gray, bg = C.alt_bg },
-  Whitespace = { fg = C.bg },
+  Whitespace = { fg = C.gray },
   VertSplit = { fg = C.bg, bg = C.fg },
   CursorLine = { bg = C.dark },
   CursorColumn = { bg = C.dark },
@@ -42,7 +42,7 @@ local highlights = {
   CursorIM = { fg = C.cursor_fg, bg = C.cursor_bg },
   TermCursor = { fg = C.cursor_fg, bg = C.cursor_bg },
   TermCursorNC = { fg = C.cursor_fg, bg = C.cursor_bg },
-  Conceal = { fg = C.accent },
+  Conceal = { fg = C.accent, bg = Config.transparent_background and "NONE" or C.bg },
   Directory = { fg = C.blue },
   SpecialKey = { fg = C.blue, style = "bold" },
   Title = { fg = C.blue, style = "bold" },
@@ -94,6 +94,14 @@ local highlights = {
   TabLine = { fg = C.light_gray, bg = C.alt_bg },
   TabLineSel = { fg = C.fg, bg = C.alt_bg },
   TabLineFill = { fg = C.fg, bg = C.alt_bg },
+  CmpDocumentation = { fg = C.fg, bg = C.none },
+  CmpDocumentationBorder = { fg = C.fg_dark, bg = C.none },
+  CmpItemAbbr = { fg = C.fg, bg = C.none },
+  CmpItemAbbrDeprecated = { fg = C.gray, bg = C.none },
+  CmpItemAbbrMatch = { fg = C.cyan, bg = C.none },
+  CmpItemAbbrMatchFuzzy = { fg = C.cyan, bg = C.none },
+  CmpItemKind = { fg = C.blue, bg = C.none },
+  CmpItemMenu = { fg = C.light_gray, bg = C.none },
 }
 
 return highlights
